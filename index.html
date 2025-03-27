@@ -9,18 +9,22 @@
         /* Contenedor para las dos secciones (en una fila) */
         .top-sections {
             display: flex;
-            justify-content: space-between; /* Distribuye el espacio entre las secciones */
-            gap: 20px; /* Espacio entre las dos tablas */
+            justify-content: space-between; /* Alinea las dos secciones horizontalmente */
+            gap: 20px; /* Añade espacio entre las tablas */
+            flex-wrap: wrap; /* Permite que se ajusten en pantallas pequeñas */
+            margin-bottom: 30px; /* Espacio debajo de las secciones */
         }
 
-        /* Estilo para la conferencia */
+        /* Sección de la conferencia */
         .conferencia-section {
-            width: 48%; /* Toma el 48% del espacio disponible */
+            flex: 1; /* Hace que ocupe espacio proporcional */
+            min-width: 300px; /* Asegura que no se vuelva demasiado pequeña */
         }
 
-        /* Estilo para la tabla de enlaces más usados */
+        /* Tabla de enlaces más usados */
         .table-container {
-            width: 48%; /* Toma el 48% del espacio disponible */
+            flex: 1; /* Hace que ocupe espacio proporcional */
+            min-width: 300px; /* Asegura que no se vuelva demasiado pequeña */
         }
 
         .table-container table {
@@ -30,122 +34,4 @@
 
         .table-container th, .table-container td {
             border: 1px solid #ddd;
-            padding: 8px;
-            text-align: left;
-        }
-
-        /* Asegura que el texto y las imágenes se adapten bien */
-        .header img {
-            max-width: 100%;
-            height: auto;
-        }
-    </style>
-</head>
-<body>
-
-    <script src="js/script.js"></script>
-    <!-- Encabezado -->
-    <div class="header">
-        <img src="imagenes/itm.png" alt="Logo del ITM">
-        <div>
-            <h1>Apoyo Tecnologías Virtuales</h1>
-            <p>Diseño y Programación de Software como Servicio (SaaS)</p>
-            <p>Desarrollo de Aplicaciones para Dispositivos Móviles</p>
-        </div>
-    </div>
-
-    <div style="height: 100px;">
-        <h3>Aquí encontrarás información general del itm y de las tecnologías 
-        <!-- Menú Desplegable -->
-        <select id="menu" onchange="irAFila()">
-            <option value="">Selecciona una opción</option>
-            <option value="fila1">Conferencias</option>
-            <option value="fila2">Problemas??</option>
-            <option value="fila3">Programación del semestre</option>
-            <option value="fila4">Mallas curriculares(Asignaturas)</option>
-            <option value="fila5">Configuración del correo institucional</option>
-            <option value="fila6">Acceso de páginas (ej Asesorías)</option>
-            <option value="fila7">Financiamiento de matrículas</option>
-            <option value="fila8">Certificado académico</option>
-            <option value="fila9">Carnet</option>
-            <option value="fila10">Ruta para la graduación</option>
-            <option value="fila11">Servicios de bienestar</option>
-            <option value="fila12">Homologaciones</option>
-            <option value="fila13">Correos importantes</option>
-            <option value="fila14">Inscripciones para grados</option>
-            <option value="fila15">Pruebas T Y T</option>
-            <option value="fila16">Catedra para graduarse</option>
-            <option value="fila17">Suficiencia en ingles</option>
-        </select>
-        </h3>    
-    </div>
-
-    <!-- Contenedor para las dos secciones -->
-    <div class="top-sections">
-        <!-- Sección de la conferencia -->
-        <div class="conferencia-section">
-            <h1>Próxima conferencia manejo del tiempo 29 de marzo 12 del día</h1>
-            <ul class="lista-con-punton">
-                <li><a href="https://teams.microsoft.com/l/meetup-join/19%3aS50UfbG2UorjBQF8dQwl0q89O5G4oANjMOHUZ-nEosQ1%40thread.tacv2/1741125316784?context=%7b%22Tid%22%3a%22a2ba4345-7764-4d22-b6a1-7cf528f3b3a5%22%2c%22Oid%22%3a%22e94db3c5-e93a-470f-bdb5-eb2e452c6ba0%22%7d" target="_blank">• Link para las reuniones viernes 12 del día dar clic aquí</a></li>
-                <li><a href="https://forms.office.com/r/cbH35czhiT" target="_blank">• Formulario para dudas, o problemas dar clic aquí</a></li>
-            </ul>
-            <h2>Grabaciones de conferencias</h2>
-            <h4>Debes tener abierto el correo institucional</h4> 
-            <ul class="lista-con-punton">
-                <li><a href="https://correoitmedu.sharepoint.com/sites/2025-Primersemestre-Diseoyprogramacindesolucionesdesoftwarec/Shared%20Documents/General/Recordings/Conferencia%20sobre%20uno%20de%20los%20elementos%20de%C2%A0%20power%20skills%C2%A0%20muy%20necesarias%20en%20las%20personas%20para%20trabajar%20en%20las%20empresas-20250321_120307-Grabaci%C3%B3n%20de%20la%20reuni%C3%B3n.mp4?web=1&referrer=Teams.TEAMS-WEB&referrerScenario=MeetingChicletGetLink.view" target="_blank">• Conferencia manejo del tiempo dar clic aquí</a></li>
-                <li><a href="https://correoitmedu-my.sharepoint.com/:v:/g/personal/dianarico7690_correo_itm_edu_co/EcFu2w1P065OsTOGmaVwBuAB_rguXonAU7QHGjCRxzO2UA?e=Fdv8lK&nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D" target="_blank">• Conferencia sobre práctica empresarial</a></li>
-            </ul>
-        </div>
-
-        <!-- Tabla de enlaces más usados -->
-        <div class="table-container">
-            <table>
-                <thead>
-                    <tr>
-                        <th colspan="3"><h1>Enlaces más usados....... </h1></th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td><a href="#target">Tienes problemas?? da clic aquí</a></td>
-                    </tr>
-                    <tr>
-                        <td><a href="#target">¿Problemas técnicos con alguna página o curso? Clic aquí</a></td>
-                    </tr>
-                    <tr>
-                        <td><a href="#target">Formulario de inscripción para el semestre</a></td>
-                    </tr>
-                    <tr>
-                        <td><a href="#target">Correo institucional</a></td>
-                    </tr>
-                    <tr>
-                        <td><a href="#target">Ruta de acceso para inscripción</a></td>
-                    </tr>
-                    <tr>
-                        <td><a href="#target">Ajustes en tu cuenta institucional</a></td>
-                    </tr>
-                    <tr>
-                        <td><a href="#target">Formulario para evaluaciones</a></td>
-                    </tr>
-                    <tr>
-                        <td><a href="#target">Certificado académico</a></td>
-                    </tr>
-                    <tr>
-                        <td><a href="#target">Mallas curriculares y asignaturas</a></td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
-    </div>
-
-    <script>
-        // Función para desplazar hacia la fila seleccionada
-        function irAFila() {
-            var seleccion = document.getElementById("menu").value;
-            if (seleccion) {
-                document.getElementById(seleccion).scrollIntoView({ behavior: 'smooth' });
-            }
-        }
-    </script>
-</body>
-</html>
+            padding: 8px
