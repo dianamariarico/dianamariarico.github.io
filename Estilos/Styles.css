@@ -1,3 +1,4 @@
+
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -64,8 +65,9 @@ table {
     border-collapse: collapse;
     margin-bottom: 20px;
     background-color: #ffffff; /* Fondo blanco para las tablas */
-    width: auto; /* Ajusta el ancho de la tabla según el contenido  max-width: 900px; /* Opcional: establece un ancho máximo para la tabla */
-    
+    width: 100%; /* Hacer que la tabla ocupe todo el ancho disponible */
+    text-align: left;
+}
    
     text-align: left; /* Opcional: alinea el texto a la izquierda en las celdas */
 }
@@ -112,7 +114,7 @@ a:hover {
 }
 
 /* Estilo de las tablas */
-.table-container, .table-container-2 {
+.table-container, .table-container-3 {
     width: 48%; /* En pantallas grandes las tablas ocupan el 48% */
     margin: 0;
 }
@@ -124,7 +126,6 @@ a:hover {
         margin-bottom: 20px; /* Añadimos espacio entre las tablas cuando están apiladas */
     }
 }
-
 #menu {
     background-color: #071d9b; /* Fondo azul */
     color: white; /* Texto en blanco */
