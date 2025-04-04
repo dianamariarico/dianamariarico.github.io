@@ -3,7 +3,7 @@ body {
     margin: 0;
     padding: 0;
     background-color: #f9f9f9; /* Color de fondo de la página */
-    color:#071d9b;   
+    color:#071d9b; 
 }
 select{
     width: 12em;
@@ -110,4 +110,3 @@ Informacion Importante
 #Icono {
     display: flex; align-items: center;
 }
-
